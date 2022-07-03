@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "task g++",
+			"command": "D:\\cpp_env\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				// "-fexec-charset=GBK",   // 处理mingw中文编码问题
+            	// "-finput-charset=UTF-8",// 处理mingw中文编码问题
+				"${file}",
+				"-o",
+				"${fileDirname}\\a.exe"    //"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: D:\\cpp_env\\mingw64\\bin\\g++.exe"
+		}
+	]
+}
